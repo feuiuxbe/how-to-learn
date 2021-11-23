@@ -16,7 +16,7 @@
   /* Яндекс - выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* Яндекс - выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .header {
@@ -61,15 +61,45 @@
   line-height: 96px;
   font-size: 102px;
   font-weight: 700;
-  /* AK - согласно ТЗ элемент должен быть поверх других блоков на малых разрешениях, поэтому
-  увеличил значение z-index на единицу */
+}
+
+/* AK - согласно ТЗ элементы title, subtitle должны быть поверх других блоков на малых разрешениях,
+поэтому создал модификатор к блоку хедер для этого эффекта */
+.header_overlay {
   z-index: 1;
 }
 
+/* AK - создал элемент подзаголовка согласно ТЗ (стр. 3 п. 3, стр. 4 п. 2) */
+.header__subtitle {
+  position: absolute;
+  width: 388px;
+  margin-left: var(--header_margin-left);
+  bottom: 30px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* AK - создал элемент для основной иллюстранции в хэдере согласно ТЗ (стр. 2 п. 5, стр. 3 п. 4 */
+.header__main-illustration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/header-image.png);
+  background-size: cover;
+  width: 765px;
+  height: 608px;
+}
+
 /* Яндекс - ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+/* АК - добавил в элемент свойства фона и позиционировал его согласно ТЗ (стр. 3 п. 5) */
 .header__square-pic {
   height: 568px;
   width: 568px;
+  background-color: var(--blue);
+  position: absolute;
+  right: 0;
+  margin-top: 64px;
 }
 
 /* Яндекс - и элемента с модификатором вида ключ-значение */
