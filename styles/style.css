@@ -37,7 +37,7 @@
   position: absolute;
   top: 30px;
   left: 64px;
-  background-image: url(/images/logo_place_header.svg);
+  background-image: url(../images/logo_place_header.svg);
 }
 
 /* AK - согласно макету, высота логотипа в хедере 32 пикселя, а в футере - 35 пикселей. Вынес в отдельный модификатор параметры высоты логотипа в хедере*/
