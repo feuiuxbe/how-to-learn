@@ -167,6 +167,7 @@
   margin-bottom: 0;
 }
 
+/* АК - для выделения слова "Вывод:" создаю отдельный элемент */
 .two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
@@ -178,9 +179,9 @@
   display: flex;
   background-color: var(--white);
   flex-direction: column;
-  border: 1px solid red;
 }
 
+/* АК - заголовок секции */
 .section-title {
   display: flex;
   margin: auto;
@@ -188,9 +189,61 @@
   margin-bottom: 20px;
   width: 60%;
   justify-content: center;
-  border: 1px solid rosybrown;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
 }
 
+/* АК - подзаголовок секции */
+.section-subtitle {
+  display: flex;
+  padding: 0;
+  margin: auto;
+  width: 60%;
+  justify-content: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* АК - таблица с цифрами (и фактами) */
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1100px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+/* АК - ячейка таблицы */
+.table__cell {
+  margin-top: 60px;
+  width: 250px;
+}
+
+/* АК - заголовок ячейки таблицы */
+.table__heading {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* АК - текст ячейки таблицы */
+.table__text {
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* АК - псевдокласс текста ячейки таблицы, убирающий нижний отступ у последнего абзаца */
+.table__text:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
 
 
 
