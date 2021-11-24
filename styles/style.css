@@ -5,6 +5,7 @@
   --gray-light: #f2f2f2;
   --blue: #2f80ed;
   --black: #000000;
+  --white: #ffffff;
   --header_margin-left: 64px;
 }
 
@@ -33,12 +34,12 @@
   background-color: var(--gray-light);
 }
 
-/* АК - создал блок для логотипа */
+/* АК - блок для логотипа */
 .logo {
   width: 183px;
 }
 
-/* АК - создал класс с модификатором для позиционирования логотипа в хедере согласно ТЗ*/
+/* АК - класс с модификатором для позиционирования логотипа в хедере согласно ТЗ*/
 .logo__place_header {
   position: absolute;
   top: 30px;
@@ -52,7 +53,7 @@
   background-image: url(../images/logo_place_header.svg);
 }
 
-/* AK - создал элемент header__title для текста Научиться учиться */
+/* AK - элемент header__title для текста Научиться учиться */
 .header__title {
   display: flex;
   align-items: center;
@@ -69,7 +70,7 @@
   z-index: 2;
 }
 
-/* AK - создал элемент подзаголовка согласно ТЗ (стр. 3 п. 3, стр. 4 п. 2) */
+/* AK - элемент подзаголовка согласно ТЗ (стр. 3 п. 3, стр. 4 п. 2) */
 .header__subtitle {
   position: absolute;
   width: 388px;
@@ -80,7 +81,7 @@
   font-weight: normal;
 }
 
-/* AK - создал элемент для основной иллюстранции в хэдере согласно ТЗ (стр. 2 п. 5, стр. 3 п. 4 */
+/* AK - элемент для основной иллюстранции в хэдере согласно ТЗ (стр. 2 п. 5, стр. 3 п. 4 */
 .header__main-illustration {
   position: absolute;
   right: 0;
@@ -104,6 +105,77 @@
   right: 0;
   margin-top: 64px;
 }
+
+/* ----- блок content ----- */
+/* AK - попробую идею, что все секции - это части большого блока "контент", идущие в колонку */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- блок description ----- */
+.description {
+  display: flex;
+  background-color: var(--white);
+
+}
+
+/* АК - блок two-columns, по макету он идет с верхним отступом от начала блока в 100 пикселей
+При этом, по макету нижний отступ принадлежит следующей секции, а не этому блоку.
+Беру в качестве приоритета макет на первой странице.
+Тут на усмотрение ревьюера - оставим мы в приоритете макет на первой странице и спозиционируем блок,
+задав маржины, либо потом добавим нижний маржин и отцентруем блок по центральной оси ср-вами флекс */
+.two-columns {
+  display: flex;
+  margin: auto;
+  margin-top: 100px;
+  width: 80%;
+  justify-content: space-between;
+
+}
+
+.two-columns__brief {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--blue);
+
+}
+
+/* АК - элемент для блока с основным текстом */
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  margin: 0;
+  padding: 0;
+}
+
+/* АК - элемент для параграфов */
+.two-columns__paragraph {
+  margin: 0 0 30px 0;
+  padding: 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* AK - псевдокласс, который берет последний элемент параграфа и обнуляет у него нижний маржин */
+.two-columns__paragraph:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+
 
 /* Яндекс - и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
