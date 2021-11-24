@@ -211,12 +211,15 @@
 
 /* АК - таблица с цифрами (и фактами) */
 .table {
+  width: 1100px;
+  margin: 0 auto 100px auto;
+}
+
+.table-list {
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 1100px;
-  margin: auto;
-  margin-bottom: 100px;
 }
 
 /* АК - ячейка таблицы */
@@ -255,7 +258,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 890px;
+  min-height: 890px;
   background-color: var(--gray-light);
   /* AK - ввожу относительное позиционирование секции, чтобы ссылка, которая по макету должна
   позиционироваться абсолютно, делала это относительно секции, а не всей страницы */
@@ -297,8 +300,26 @@
   right: 48px;
 }
 
+/* ----- секция kaufman ----- */
+.kaufman {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--black);
+  position: relative;
+  z-index: 0;
+}
 
+.section-title_theme-dark {
+  color: var(--white);
+  margin: 90px auto 0 auto;
+}
 
+.section-subtitle_theme-dark {
+  color: var(--white);
+  margin: 20px auto 0 auto;
+}
 
 /* Яндекс - и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
@@ -306,4 +327,21 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.table__heading_theme_dark {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  top: 0px;
+  right: -210px;
+  width: 877px;
+  height: 877px;
+  color: var(--blue);
+  background-image: url("../images/kaufman-triangle.svg");
+  z-index: -1;
 }
