@@ -334,6 +334,10 @@
   font-weight: 700;
 }
 
+.table_theme_dark {
+  margin-bottom: 90px;
+}
+
 .kaufman__triangle {
   position: absolute;
   top: 0px;
