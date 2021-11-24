@@ -48,7 +48,7 @@
 /* АК - вынес в отдельный модификатор фоновое изображение в хедере (с учетом требований к почти
 аналогичному изображению в футере: стр. 17 п. 5) */
 .logo__place_header-image {
-  background-image: url(../images/logo_place_header.svg);
+  background-image: url("../images/logo_place_header.svg");
 }
 
 /* AK - элемент header__title для текста Научиться учиться */
@@ -84,7 +84,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  background-image: url(../images/header-image.png);
+  background-image: url("../images/header-image.png");
   background-size: cover;
   width: 765px;
   height: 608px;
@@ -102,6 +102,11 @@
   position: absolute;
   right: 0;
   margin-top: 64px;
+}
+
+/* АК - ссылка в хедере. Согласно макету у ссылки нет подчеркивания */
+.header__link {
+  text-decoration: none;
 }
 
 /* ----- блок content ----- */
@@ -244,12 +249,53 @@
 }
 
 /* ----- секция feynman ----- */
+/* AK - беру за приоритет макет (см. примечание к предыдущей секции), согласно которому
+отступ в 100 пикселей принадлежит секции digits */
 .feynman {
+  box-sizing: border-box;
   display: flex;
+  flex-direction: column;
+  height: 890px;
   background-color: var(--gray-light);
+  /* AK - ввожу относительное позиционирование секции, чтобы ссылка, которая по макету должна
+  позиционироваться абсолютно, делала это относительно секции, а не всей страницы */
+  position: relative;
+  background-image: url("../images/feynman.png");
+  background-size: 867px 637px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  padding-top: 100px;
 }
 
+/* АК - элемент заголовка секции. Идет как заголовок второго уровня, поэтому задаю отступы */
+.feynman__title {
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 700;
+  margin: 0 auto 70px auto;
+  width: 648px;
+  text-align: center;
+}
 
+/* АК - элемент подзаголовока секции. Идет как абзац, поэтому задаю отстуты */
+.feynman__subtitle {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0 auto;
+}
+
+/* АК - ссылка в секции. Абсолютно позиционируется в 50% от высоты секции */
+.feynman__link {
+  color: var(--blue);
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  right: 48px;
+}
 
 
 
