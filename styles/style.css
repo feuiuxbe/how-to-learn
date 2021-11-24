@@ -113,11 +113,10 @@
   flex-direction: column;
 }
 
-/* ----- блок description ----- */
+/* ----- секция description ----- */
 .description {
   display: flex;
   background-color: var(--white);
-
 }
 
 /* АК - блок two-columns, по макету он идет с верхним отступом от начала блока в 100 пикселей
@@ -173,6 +172,28 @@
   font-size: 24px;
   font-weight: 700;
 }
+
+/* ----- секция digits ----- */
+.digits {
+  display: flex;
+  background-color: var(--white);
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.section-title {
+  display: flex;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  width: 60%;
+  justify-content: center;
+  border: 1px solid rosybrown;
+}
+
+
+
+
 
 
 
