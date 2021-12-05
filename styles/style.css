@@ -382,7 +382,7 @@
   justify-content: space-between;
 }
 
-/* AK - исправил (ошибка валидации) */
+/* AK - исправил на justify-content (ошибка валидации) */
 .footer__columns_content-copyright {
   display: flex;
   flex-basis: 711px;
