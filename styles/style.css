@@ -6,7 +6,6 @@
   --blue: #2f80ed;
   --black: #000000;
   --white: #ffffff;
-  --header_margin-left: 64px;
 }
 
 .page {
@@ -38,41 +37,46 @@
 }
 
 /* АК - класс с модификатором для позиционирования логотипа в хедере согласно ТЗ*/
-.logo__place_header {
+/* АК - перенес ссылку на фоновое изображение из модификатора .logo__place_header-image, который
+ревьюер предложил удалить */
+/* AK - исправил наименование модификатора согласно БЭМ */
+.logo_place_header {
   position: absolute;
   top: 30px;
   height: 32px;
-  left: var(--header_margin-left);
-}
-
-/* АК - вынес в отдельный модификатор фоновое изображение в хедере (с учетом требований к почти
-аналогичному изображению в футере: стр. 17 п. 5) */
-.logo__place_header-image {
+  left: 64px;
   background-image: url("../images/logo_place_header.svg");
 }
 
+/* АК - модификатор удаляю согласно предложению ревьюера
+.logo__place_header-image {} */
+
+
 /* AK - элемент header__title для текста Научиться учиться */
 /* AK - поменял width на max-width согласно комментариям ревьюера */
+/* АК - добавил з-индекс в этот элемент согласно комментариям ревьюера */
 .header__title {
   display: flex;
   align-items: center;
-  margin-left: var(--header_margin-left);
+  margin-left: 64px;
   max-width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 700;
+  z-index: 2;
 }
 
 /* AK - согласно ТЗ элементы title, subtitle должны быть поверх других блоков на малых разрешениях,
-поэтому создал модификатор к блоку хедер для этого эффекта */
-.header_overlay {
-  z-index: 2;
-}
+поэтому создал модификатор к блоку хедер для этого эффекта
+АК - ревьюер предложил не усложнять код доп. классами, элемент удален, "z-index: 2" перенесен из него в
+класс header__title, header__subtitle
+.header_overlay {}*/
 
 /* AK - элемент подзаголовка согласно ТЗ (стр. 3 п. 3, стр. 4 п. 2) */
 /* AK - поменял width на max-width согласно комментариям ревьюера */
 /* AK - также удалил значение margin-left целиком, т.к. элемент позиционируется абсолютно,
 следовательно этот параметр я могу заменить left */
+/* АК - добавил з-индекс в этот элемент согласно комментариям ревьюера */
 .header__subtitle {
   position: absolute;
   max-width: 388px;
@@ -81,15 +85,18 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  z-index: 2;
 }
 
 /* AK - элемент для основной иллюстранции в хэдере согласно ТЗ (стр. 2 п. 5, стр. 3 п. 4 */
+/* АК - часть свойств класса закомментил, т.к. согласно рекомендациям ревьюера добавил тэг img
+вместо div (сделал изображение контентным, а не декоративным */
 .header__main-illustration {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-image: url("../images/header-image.png");
-  background-size: cover;
+  /* background-image: url("../images/header-image.png"); */
+  /* background-size: cover; */
   width: 765px;
   height: 608px;
   /* AK - по макету блок идет над синим квадратом, но должен быть "ниже" заголовка и подзаголовка,
@@ -391,13 +398,13 @@
 }
 
 /* AK - исправил высоту модификатора согласно брифу и замечаниям ревьюера */
-.logo__place_footer {
+.logo_place_footer {
   height: 35px;
-}
-
-.logo__place_footer-image {
   background-image: url("../images/logo_place_footer.svg");
 }
+
+/* AK - модификатор удаляю согласно предложению ревьюера
+.logo__place_footer-image {} */
 
 .footer__author {
   margin: 18px 0;
