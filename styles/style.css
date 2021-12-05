@@ -52,11 +52,12 @@
 }
 
 /* AK - элемент header__title для текста Научиться учиться */
+/* AK - поменял width на max-width согласно комментариям ревьюера */
 .header__title {
   display: flex;
   align-items: center;
   margin-left: var(--header_margin-left);
-  width: 730px;
+  max-width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 700;
@@ -69,11 +70,13 @@
 }
 
 /* AK - элемент подзаголовка согласно ТЗ (стр. 3 п. 3, стр. 4 п. 2) */
+/* AK - поменял width на max-width согласно комментариям ревьюера */
+/* AK - также удалил значение margin-left целиком, т.к. элемент позиционируется абсолютно,
+следовательно этот параметр я могу заменить left */
 .header__subtitle {
   position: absolute;
-  width: 388px;
-  margin-left: var(--header_margin-left);
-  left: 0;
+  max-width: 388px;
+  left: 64px;
   bottom: 30px;
   line-height: 25px;
   font-size: 18px;
@@ -96,19 +99,22 @@
 
 /* Яндекс - ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 /* АК - добавил в элемент свойства фона и позиционировал его согласно ТЗ (стр. 3 п. 5) */
+/* AK - также удалил значение margin-top целиком, т.к. элемент позиционируется абсолютно,
+следовательно этот параметр я могу заменить top */
 .header__square-pic {
   height: 568px;
   width: 568px;
   background-color: var(--blue);
   position: absolute;
-  top: 0;
+  top: 64px;
   right: 0;
-  margin-top: 64px;
 }
 
 /* АК - ссылка в хедере. Согласно макету у ссылки нет подчеркивания */
+/* AK - забыл указать цвет у ссылки, исправляюсь */
 .header__link {
   text-decoration: none;
+  color: var(--blue);
 }
 
 /* ----- блок content ----- */
@@ -167,7 +173,8 @@
 }
 
 /* AK - псевдокласс, который берет последний элемент параграфа и обнуляет у него нижний маржин */
-.two-columns__paragraph:nth-last-of-type(1) {
+/* AK- изменил псевдокласс согласно комментариям ревьюера */
+.two-columns__paragraph:last-of-type {
   margin-bottom: 0;
 }
 
@@ -216,7 +223,10 @@
   margin: 0 auto 100px auto;
 }
 
+/* AK - обнулил отступы внешние и внутренние у класса согласно замечаниям ревьюера */
 .table-list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -240,7 +250,9 @@
 }
 
 /* АК - текст ячейки таблицы */
+/* AK - обнулил верхний отступ согласно замечаниям ревьюера */
 .table__text {
+  margin-top: 0;
   margin-bottom: 20px;
   line-height: 1.2;
   font-size: 18px;
@@ -248,7 +260,8 @@
 }
 
 /* АК - псевдокласс текста ячейки таблицы, убирающий нижний отступ у последнего абзаца */
-.table__text:nth-last-of-type(1) {
+/* AK - изменил псевдокласс согласно замечанию ревьюера */
+.table__text:last-of-type {
   margin-bottom: 0;
 }
 
@@ -272,12 +285,13 @@
 }
 
 /* АК - элемент заголовка секции. Идет как заголовок второго уровня, поэтому задаю отступы */
+/* AK - поменял width на max-width согласно комментариям ревьюера */
 .feynman__title {
   line-height: 1.15;
   font-size: 120px;
   font-weight: 700;
   margin: 0 auto 70px auto;
-  width: 648px;
+  max-width: 648px;
   text-align: center;
 }
 
@@ -368,15 +382,17 @@
   justify-content: space-between;
 }
 
+/* AK - исправил (ошибка валидации) */
 .footer__columns_content-copyright {
   display: flex;
   flex-basis: 711px;
   flex-direction: column;
-  align-items: space-between;
+  justify-content: space-between;
 }
 
+/* AK - исправил высоту модификатора согласно брифу и замечаниям ревьюера */
 .logo__place_footer {
-  height: 32px;
+  height: 35px;
 }
 
 .logo__place_footer-image {
