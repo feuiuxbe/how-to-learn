@@ -391,6 +391,7 @@
   padding: 60px 0 40px;
 }
 
+/* AK - удалил невалидную строчку, спасибо ревьюеру! */
 .footer__columns {
   display: flex;
   justify-content: space-between;
