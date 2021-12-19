@@ -29,6 +29,7 @@
   применительно к блоку хеадер, а не боди */
   position: relative;
   background-color: var(--gray-light);
+  overflow: hidden;
 }
 
 /* АК - блок для логотипа */
@@ -128,8 +129,22 @@
   right: 0;
 }
 
+/* AK - rotation block */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* AK - создал блок для вращения синего квадрата в шапке сайта */
+.rotation {
+  animation: rotation 20s linear infinite;
+}
+
 /* АК - ссылка в хедере. Согласно макету у ссылки нет подчеркивания */
-/* AK - забыл указать цвет у ссылки, исправляюсь */
 .header__link {
   text-decoration: none;
   color: var(--blue);
@@ -203,83 +218,12 @@
   font-weight: 700;
 }
 
-/* ----- секция digits ----- */
-.digits {
-  display: flex;
-  background-color: var(--white);
-  flex-direction: column;
-}
+/* ----- секция techniques ----- */
 
-/* АК - заголовок секции */
-.section-title {
-  display: flex;
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 20px;
-  width: 60%;
-  justify-content: center;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: 700;
-}
+/* ----- секция video ----- */
 
-/* АК - подзаголовок секции */
-.section-subtitle {
-  display: flex;
-  padding: 0;
-  margin: auto;
-  width: 60%;
-  justify-content: center;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-}
+/* ----- секция oakley ----- */
 
-/* АК - таблица с цифрами (и фактами) */
-.table {
-  width: 1100px;
-  margin: 0 auto 100px auto;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-/* AK - удалил класс согласно замечаниям ревьюера
-.table-list {}*/
-
-/* АК - ячейка таблицы */
-.table__cell {
-  margin-top: 60px;
-  width: 250px;
-}
-
-/* АК - заголовок ячейки таблицы */
-.table__heading {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-/* АК - текст ячейки таблицы */
-/* AK - обнулил верхний отступ согласно замечаниям ревьюера */
-.table__text {
-  margin-top: 0;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-}
-
-/* АК - псевдокласс текста ячейки таблицы, убирающий нижний отступ у последнего абзаца */
-/* AK - изменил псевдокласс согласно замечанию ревьюера */
-.table__text:last-of-type {
-  margin-bottom: 0;
-}
 
 /* ----- секция feynman ----- */
 /* AK - беру за приоритет макет (см. примечание к предыдущей секции), согласно которому
@@ -330,6 +274,82 @@
   top: 50%;
   right: 48px;
 }
+
+/* ----- секция digits ----- */
+.digits {
+  display: flex;
+  background-color: var(--white);
+  flex-direction: column;
+}
+
+/* АК - заголовок секции */
+.section-title {
+  display: flex;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  width: 60%;
+  justify-content: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* АК - подзаголовок секции */
+.section-subtitle {
+  display: flex;
+  padding: 0;
+  margin: auto;
+  width: 60%;
+  justify-content: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* АК - таблица с цифрами (и фактами) */
+.table {
+  width: 1100px;
+  margin: 0 auto 100px auto;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* АК - ячейка таблицы */
+.table__cell {
+  margin-top: 60px;
+  width: 250px;
+}
+
+/* АК - заголовок ячейки таблицы */
+.table__heading {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* АК - текст ячейки таблицы */
+/* AK - обнулил верхний отступ согласно замечаниям ревьюера */
+.table__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* АК - псевдокласс текста ячейки таблицы, убирающий нижний отступ у последнего абзаца */
+/* AK - изменил псевдокласс согласно замечанию ревьюера */
+.table__text:last-of-type {
+  margin-bottom: 0;
+}
+
 
 /* ----- секция kaufman ----- */
 .kaufman {
