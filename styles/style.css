@@ -271,6 +271,13 @@
 
 /* ----- секция video ----- */
 
+.video__iframes {
+  display: flex;
+  margin: 50px auto 0 auto;
+
+}
+
+
 /* ----- секция oakley ----- */
 
 
