@@ -270,6 +270,12 @@
 
 
 /* ----- секция video ----- */
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .video__iframes {
   display: flex;
