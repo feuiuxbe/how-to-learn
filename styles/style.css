@@ -437,6 +437,7 @@
 /* ----- секция khan ----- */
 .khan {
   display: flex;
+  background: var(--gray-light);
 }
 
 .khan__container {
