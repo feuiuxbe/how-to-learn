@@ -434,6 +434,79 @@
   margin-bottom: 0;
 }
 
+/* ----- секция khan ----- */
+.khan {
+  display: flex;
+}
+
+.khan__container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 105px auto 0 auto;
+}
+
+.khan__author {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.khan__title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 50px 0;
+  padding: 0;
+}
+
+.khan__quote {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 36px 0;
+  padding: 0;
+  width: 790px;
+}
+
+.khan__quote-author {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.khan__quote-author-subline {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 68px 0;
+  padding: 0;
+}
+
+.khan__book-container {
+  display: flex;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  margin-right: 48px;
+}
+
+.khan__buy-link {
+  display: block;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: var(--blue);
+}
 
 /* ----- секция kaufman ----- */
 .kaufman {
@@ -522,9 +595,6 @@
   background-image: url("../images/logo_place_footer.svg");
 }
 
-/* AK - модификатор удаляю согласно предложению ревьюера
-.logo__place_footer-image {} */
-
 .footer__author {
   margin: 18px 0;
   line-height: 25px;
@@ -582,10 +652,3 @@
   height: 16px;
   background-repeat: no-repeat;
 }
-
-/* AK - обнуляю дефолтные стили у параграфа описания социальных сетей */
-/* АК - удалил элемент целиком согласно замечаниям ревьюера, т.к. теперь текст идет внутри ссылки */
-/* .footer__social-description {
-  margin: 0;
-  padding: 0;
-} */
