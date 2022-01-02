@@ -148,6 +148,12 @@
 .header__link {
   text-decoration: none;
   color: var(--blue);
+  opacity: 1;
+}
+
+.header__link:hover {
+  transition: opacity 0.3s linear;
+  opacity: 0.7;
 }
 
 /* ----- блок content ----- */
@@ -345,6 +351,12 @@
   position: absolute;
   top: 50%;
   right: 48px;
+  opacity: 1;
+}
+
+.feynman__link:hover {
+  transition: opacity 0.3s linear;
+  opacity: 0.7;
 }
 
 /* ----- секция digits ----- */
@@ -554,6 +566,12 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  opacity: 1;
+}
+
+.footer__column-link:hover {
+  transition: opacity 0.3s linear;
+  opacity: 0.7;
 }
 
 .footer__social-icon {
