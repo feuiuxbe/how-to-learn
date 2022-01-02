@@ -452,7 +452,6 @@
   font-size: 30px;
   font-weight: normal;
   margin: 0;
-  padding: 0;
 }
 
 .khan__title {
@@ -460,7 +459,6 @@
   font-size: 60px;
   font-weight: 700;
   margin: 0 0 50px 0;
-  padding: 0;
 }
 
 .khan__quote {
@@ -468,7 +466,6 @@
   font-size: 24px;
   font-weight: normal;
   margin: 0 0 36px 0;
-  padding: 0;
   width: 790px;
 }
 
@@ -477,7 +474,6 @@
   font-size: 24px;
   font-weight: 700;
   margin: 0 0 10px 0;
-  padding: 0;
 }
 
 .khan__quote-author-subline {
@@ -485,7 +481,6 @@
   font-size: 24px;
   font-weight: normal;
   margin: 0 0 68px 0;
-  padding: 0;
 }
 
 .khan__book-container {
@@ -506,9 +501,14 @@
   font-size: 30px;
   font-weight: normal;
   margin: 0;
-  padding: 0;
   text-decoration: none;
   color: var(--blue);
+  opacity: 1;
+}
+
+.khan__buy-link:hover {
+  transition: opacity 0.3s linear;
+  opacity: 0.7;
 }
 
 /* ----- секция kaufman ----- */
