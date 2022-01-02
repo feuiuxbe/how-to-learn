@@ -560,6 +560,34 @@
   background-size: cover;
 }
 
+/* ----- секция resources ----- */
+.resources {
+  display: flex;
+  flex-direction: column;
+}
+
+.resources__logo-zone {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 80px auto 217px auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.resources__logo {
+  display: block;
+  width: 270px;
+  height: 38px;
+  opacity: 1;
+}
+
+.resources__logo:hover {
+  transition: opacity 0.3s linear;
+  opacity: 0.7;
+}
+
+
 /* ----- секция footer ----- */
 /* AK - добавил свойства классу согласно замечаниям ревьюера */
 .footer {
