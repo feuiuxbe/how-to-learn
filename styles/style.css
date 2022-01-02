@@ -151,10 +151,10 @@
   opacity: 1;
 }
 
-.header__link:hover {
+/* .header__link:hover {
   transition: opacity 0.3s linear;
   opacity: 0.7;
-}
+} */
 
 /* ----- блок content ----- */
 /* AK - попробую идею, что все секции - это части большого блока "контент", идущие в колонку */
@@ -354,10 +354,10 @@
   opacity: 1;
 }
 
-.feynman__link:hover {
+/* .feynman__link:hover {
   transition: opacity 0.3s linear;
   opacity: 0.7;
-}
+} */
 
 /* ----- секция digits ----- */
 .digits {
@@ -430,9 +430,9 @@
 
 /* АК - псевдокласс текста ячейки таблицы, убирающий нижний отступ у последнего абзаца */
 /* AK - изменил псевдокласс согласно замечанию ревьюера */
-.table__text:last-of-type {
+/* .table__text:last-of-type {
   margin-bottom: 0;
-}
+} */
 
 /* ----- секция khan ----- */
 .khan {
@@ -506,10 +506,10 @@
   opacity: 1;
 }
 
-.khan__buy-link:hover {
+/* .khan__buy-link:hover {
   transition: opacity 0.3s linear;
   opacity: 0.7;
-}
+} */
 
 /* ----- секция kaufman ----- */
 .kaufman {
@@ -582,10 +582,10 @@
   opacity: 1;
 }
 
-.resources__logo:hover {
+/* .resources__logo:hover {
   transition: opacity 0.3s linear;
   opacity: 0.7;
-}
+} */
 
 
 /* ----- секция footer ----- */
@@ -670,10 +670,10 @@
   opacity: 1;
 }
 
-.footer__column-link:hover {
+/* .footer__column-link:hover {
   transition: opacity 0.3s linear;
   opacity: 0.7;
-}
+} */
 
 .footer__social-icon {
   display: inline-flex;
